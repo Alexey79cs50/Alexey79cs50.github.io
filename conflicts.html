@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Style conflicts</title>
+	<style type="text/css">
+		.red {
+			background-color: red;
+			font-style: italic;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+	<nav><a href="index.html">Back to main page</a></nav>
+	<p class="red">Class red background colour declared in page is overrided by external declaration. Last declaration always wins. <br>But font italic style was kept - so classes got merged </p>
+	<p class="red" style="background-color: lightgreen;">last declaration wins again</p>
+	<p>When element overwritten on some level - all sub elements at all sub levels will enherit this too</p>
+	<br>
+	<h2>Spesifity</h2>
+	<p style="background-color: lightgreen;" class="red">Style wins class</p>
+	<p>in line style the strongest then follows > id > class, pseudo class, attribute > # of elements</p>
+
+</body>
+</html>

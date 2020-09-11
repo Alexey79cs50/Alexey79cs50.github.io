@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Selectors</title>
+	<style type="text/css">
+		h3 {
+			color: green;
+			text-shadow: 2px 2px 3px red; 
+		}
+
+		.header {
+			color: red;
+		}
+
+		div, h2, #header {
+			color: blue;
+		}
+
+		h3.white {
+			color: white;
+		}
+
+		/*p direct child only of div*/
+		div > p {
+			color: gray;
+		}
+
+		/*applied to p at all hierarchy levels of div*/
+		div p {
+			font-size: 20pt;
+		}
+
+		/*will apply to <span> only within any element with reference to "par1" class at any hierarchy level*/
+		.par1 span {
+			color: lime;
+		}
+
+		/*any element with class "cool" and direct child of <p>*/
+		p > .cool {
+			background: yellow;
+		}
+
+		div.back {
+			background: green;
+		}
+
+		div.font {
+			color: white;
+		}
+
+		/*if any element has both classes applied - this will apply additionaly*/		
+		.back.font {
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+	<nav><a href="index.html">Back to main page</a></nav>
+	<h3>Sample 1</h3>
+	<h3 class="header">Sample 2</h3>
+	<h3 id="header">Sample 3</h3>
+	<h2>Sample <div = class="header">4</div></h2>
+	<div>Sample 5</div>
+	<h3 class="white">Sample 6</h3>
+	<p>Just &ltp&gt</p>
+	<div><p>&ltp&gt within &ltdiv&gt. <article><p>This is nested &ltp&gt direct child of &ltarticle&gt</p></article></p></div>
+	<article class="par1">Text within &ltarticle&gt. <span>&ltspan&gt within &ltarticle&gt text</span></article>
+	<p class="par1">Text  within &ltp&gt. <span>&ltspan&gt within &ltp&gt text</span></p>
+	<p><span>Test without class. </span><span class="cool">Class "cool" applied</span><article><span class="cool">Class "cool" applied at lower hierarchy level</span></article></p>
+	<br>
+	<div>Just div</div>
+	<div class="back">div with class "back"</div>
+	<div class="back font">div with classes "back" + "font"</div>
+</body>
+</html>

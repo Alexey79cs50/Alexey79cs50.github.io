@@ -1,0 +1,40 @@
+.header {
+	font-size: 55pt;
+	font-weight: bolder;
+	text-align: center;
+	color: darkblue;
+	margin-bottom: 45px;
+}
+
+body{
+	background-color: lightblue;
+	font-family: cursive;
+}
+
+li {
+	list-style: none;
+}
+
+li a {
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	font-size: 35pt;
+	width: 24%;
+	margin-left: 38%;
+	margin-bottom: 20px;
+	box-shadow: 2px 2px 10px;
+}
+
+li > a:link, a:visited {
+	background-color: #87CEEB;
+	border: 3px solid blue;
+	color: blue;
+}
+
+li > a:hover, a:active {
+	background-color: #EFEFEF;
+	border: 3px solid gray;
+	color: gray;
+	margin-left: 38.3%;
+}

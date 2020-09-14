@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Box model</title>
+	<style type="text/css">
+		* {
+			box-sizing: border-box;			
+		}
+		body {
+			background-color: gray;
+			margin: 0px;
+			padding: 0px;
+		}
+		.box {
+			background-color: blue;
+			margin: 40px;
+			/*order is: top > right > bottom > left*/
+			padding: 20px 40px 40px 30px;
+			border: 20px solid black;
+			width: 300px;
+		}
+		.content {
+			background-color: yellow;
+		}
+		.box1 {
+			height: 100px;
+			width: 200px;
+			padding: 20px;
+			background-color: green;
+		}
+		.content1 {
+			background-color: yellow;
+		}
+	</style>
+
+</head>
+<body>
+	<nav><a href="index.html">Back to main page</a></nav>
+	<h2>Box elements</h2>
+	<p>Gray area - margins</p>
+	<p>Black - border</p>
+	<p>Blue - outer element padding</p>
+	<p>Yellow - content element</p> 
+	<p>Width property sets inner size. To set size based on different box element you can use box-sizing: border-box;<br>
+	box-sizing not inherited! so not possible to set on body level to apply everywhere <br>
+	you can use '*' selector to apply to every element<br>
+	this selector is usefull to reset browser defaults too</p>
+	<div class="box">
+		<div class="content">Some content here</div>
+	</div>
+
+	<br>
+	<p>Left and right margings of two inline elements are adding up</p>
+	<div>
+		<span style="margin-right: 300px; background-color: green; width: 300px;">300px width and 300px right margin</span>
+		<span style="margin-left: 300px; background-color: green; width: 300px;">300px width and 300px left margin</span>
+	</div>
+
+	<p>but for top and bottom margin the larger will stay</p>
+	<div>
+		<div style="margin-bottom: 50px; background-color: green; width: 300px;">300px width and 50px bottom margin</div>
+		<div style="margin-top: 150px; background-color: yellow; width: 300px;">300px width and 150px top margin</div>
+	</div>
+
+	<br>
+	<h2>Overflow</h2>
+	<div class="box1">
+		<div class="content1">
+			Normal behaivior<br> Some sample text here.Some sample text here.Some sample text here.Some sample text here.
+			Some sample text here.Some sample text here.Some sample text here.Some sample text here.
+		</div>
+	</div>
+	<div>
+		New content New content New content New content
+	</div>
+
+	<div class="box1" style="margin-top: 100px; overflow: hidden;">
+		<div class="content1">
+			overflow: hidden;<br> Some sample text here.Some sample text here.Some sample text here.Some sample text here.
+			Some sample text here.Some sample text here.Some sample text here.Some sample text here.
+		</div>
+	</div>
+	<div class="box1" style="margin-top: 10px; overflow: auto;">
+		<div class="content1">
+			overflow: auto;<br> Some sample text here.Some sample text here.Some sample text here.Some sample text here.
+			Some sample text here.Some sample text here.Some sample text here.Some sample text here.
+		</div>
+	</div>	
+
+	<div class="box1" style="margin-top: 10px; overflow: scroll;">
+		<div class="content1">
+			overflow: scroll;<br> Some sample
+		</div>
+	</div>
+</body>
+</html>

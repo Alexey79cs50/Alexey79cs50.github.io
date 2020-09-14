@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Style conflicts</title>
+	<style type="text/css">
+	
+		td, th {
+    	border: 1px solid;
+    	text-align: left;
+    	padding: 8px;
+		}
+
+	</style>
+
+</head>
+<body>
+	<nav><a href="index.html">Back to main page</a></nav>
+	<br>
+	<table>
+		<thead>
+		<th >
+			Major text properties:	
+		</th>			
+		</thead>
+	<tr>
+		<td>font family: "Comic Sans MS", cursive, sans-serif<br>Few options can be listed, in case of the first absent - next will be applied</td>
+		<td><span style="font-family: 'Comic Sans MS', cursive, sans-serif;">Text example</span></td>
+	</tr>
+	<tr>
+		<td>color: blue or color: #00F or color: #0000FF</td>
+		<td style="color: #00F;">Text example</td>
+	</tr>
+	<tr>
+		<td>font-style: italic</td>
+		<td style="font-style: italic;">Text example</td>		
+	</tr>
+	<tr>
+		<td>font-weight: bold or font-weight: 800</td>
+		<td style="font-weight: bold;">Text example</td>		
+	</tr>
+	<tr>
+		<td>font-size: 24px. Default browser size 16px. Could be font-size: 120% or font-size: 1.2em. <br>Relative sizes will stack if defined multiple times!</td>
+		<td style="font-size: 24px;">Text example</td>		
+	</tr>
+	<tr>
+		<td>text-transform: uppercase</td>
+		<td style="text-transform: uppercase;">Text example</td>		
+	</tr>
+	<tr>
+		<td>text-align: center</td>
+		<td style="text-align: center;">Text example</td>		
+	</tr>
+	</table>
+</body>
+</html>

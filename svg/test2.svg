@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+
+  <style>
+    .shape {
+      transform-origin: 60px 60px;
+      animation: rotate 1.2s linear infinite;
+      fill: none;
+      stroke: #333;
+      stroke-width: 8;
+      stroke-linejoin: round;
+    }
+
+    #square,
+    #triangle {
+      display: none;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+  <rect id="square" class="shape" x="35" y="35" width="50" height="50"></rect>
+
+  <polygon id="triangle" class="shape" points="60,25 90,85 30,85"></polygon>
+
+  <script>
+    
+      const params = new URLSearchParams(window.location.search);
+      const shape = params.get("shape");
+
+      const square = document.getElementById("square");
+      const triangle = document.getElementById("triangle");
+
+      if (shape === "triangle") {
+        triangle.style.display = "block";
+      } else {
+        square.style.display = "block";
+      }
+    
+  </script>
+</svg>

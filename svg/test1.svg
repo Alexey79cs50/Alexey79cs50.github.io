@@ -1,7 +1,20 @@
-<script type="text/javascript">
-    alert("This is an example of a stored XSS attack in an SVG image")
-  </script>
-<img src="123" onerror=alert(1)>
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="500" height="120">
 
-<form action="//123.com"><button>Go</button></form>
-   
+  <foreignObject x="0" y="0" width="500" height="120">
+    <xhtml:div style="width:500px;height:120px;padding:20px;box-sizing:border-box;font-family:Arial, sans-serif;">
+
+      <xhtml:form action="http://localhost:7777/search" method="GET" style="display:flex;gap:8px;align-items:center;">
+
+        <xhtml:input type="text" name="q" placeholder="Search..." style="width:260px;height:36px;padding:6px 10px;font-size:16px;box-sizing:border-box;">
+
+        <xhtml:button type="submit" style="width:90px;height:36px;font-size:16px;cursor:pointer;">
+          Search
+        </xhtml:button>
+
+      </xhtml:input></xhtml:form>
+
+    </xhtml:div>
+  </foreignObject>
+
+</svg>
